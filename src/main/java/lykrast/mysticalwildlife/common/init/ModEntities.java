@@ -34,8 +34,11 @@ import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.fml.client.registry.IRenderFactory;
+
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = MysticalWildlife.MODID)
 public class ModEntities {
@@ -150,17 +153,19 @@ public class ModEntities {
 	
 	@OnlyIn(Dist.CLIENT)
     public static void initModels() {
-        RenderingRegistry.registerEntityRenderingHandler(EntityVrontausaurus.class, RenderVrontausaurus::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityYagaHog.class, RenderYagaHog::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityDuskLurker.class, RenderDuskLurker::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityCicaptera.Azure.class, RenderCicaptera.Azure::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityCicaptera.Verdant.class, RenderCicaptera.Verdant::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityCicaptera.Crimson.class, RenderCicaptera.Crimson::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityCicaptera.Sandy.class, RenderCicaptera.Sandy::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityCicaptera.Wintry.class, RenderCicaptera.Wintry::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityCicaptera.Lovely.class, RenderCicaptera.Lovely::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityPlumper.class, RenderPlumper::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityKrill.class, RenderKrill::new);
+		RenderingRegistry.registerEntityRenderingHandler(vrontausaurus, RenderVrontausaurus::new);
+        RenderingRegistry.registerEntityRenderingHandler(yagaHog, RenderYagaHog::new);
+        RenderingRegistry.registerEntityRenderingHandler(duskLurker, RenderDuskLurker::new);
+        RenderingRegistry.registerEntityRenderingHandler(cicapteraAzure, RenderCicaptera.Azure::new);
+        RenderingRegistry.registerEntityRenderingHandler(cicapteraVerdant, RenderCicaptera.Verdant::new);
+        RenderingRegistry.registerEntityRenderingHandler(cicapteraCrimson, RenderCicaptera.Crimson::new);
+        RenderingRegistry.registerEntityRenderingHandler(cicapteraSandy, RenderCicaptera.Sandy::new);
+        RenderingRegistry.registerEntityRenderingHandler(cicapteraWintry, RenderCicaptera.Wintry::new);
+        RenderingRegistry.registerEntityRenderingHandler(cicapteraLovely, RenderCicaptera.Lovely::new);
+        RenderingRegistry.registerEntityRenderingHandler(plumper, RenderPlumper::new);
+        RenderingRegistry.registerEntityRenderingHandler(krill, RenderKrill::new);
+
+
     }
 
 }
