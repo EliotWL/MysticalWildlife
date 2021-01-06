@@ -1,27 +1,29 @@
 modLoader="javafml"
-loaderVersion="[28,)"
-issueTrackerURL="https://github.com/Lykrast/MysticalWildlife/issues"
+loaderVersion="[31,)"
+issueTrackerURL="https://github.com/EliotWL/MysticalWildlife/issues"
 
 [[mods]]
 modId="mysticalwildlife"
-version="${version}"
-displayName="Mystical Wildlife"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/mystical-wildlife"
+version="1.0.0.0"
+displayName="Mystical Wildlife 1.15.2 Fork"
+displayURL=""
 logoFile="logo.png"
-authors="Lykrast, MCVinnyq"
+authors="EliotWL with credit to original authors Lykrast, MCVinnyq"
 description='''
-Adds several imaginary animals to populate your worlds and make the wildlife a bit more varied and interesting, especially from biome to biome.
+Fork of Lykrast's mod the adds several imaginary animals to populate your worlds and make the wildlife a bit more varied and interesting, especially from biome to biome.  Now ported to 1.15.2
 '''
+
+
 
 [[dependencies.mysticalwildlife]]
     modId="forge"
     mandatory=true
-    versionRange="[28,)"
+    versionRange="[31,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.mysticalwildlife]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.14.4]"
+    versionRange="[1.15.2]"
     ordering="NONE"
     side="BOTH"
