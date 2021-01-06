@@ -24,7 +24,7 @@ public class EntityAIForage extends Goal {
     public boolean shouldExecute() {
         if (forager.isChild() || !forager.onGround || forager.forageCooldown > 0) return false;
         else {
-            BlockPos pos = new BlockPos(forager.posX, forager.posY - 1, forager.posZ);
+            BlockPos pos = new BlockPos(forager.serverPosX, forager.serverPosY - 1, forager.serverPosZ);
             return world.getBlockState(pos).getMaterial() == Material.SAND;
         }
     }
@@ -55,7 +55,7 @@ public class EntityAIForage extends Goal {
         timer = Math.max(0, timer - 1);
 
         if (timer == 4) {
-			BlockPos blockpos = new BlockPos(forager.posX, forager.posY - 1, forager.posZ);
+			BlockPos blockpos = new BlockPos(forager.serverPosX, forager.serverPosY - 1, forager.serverPosZ);
 
 			if (world.getBlockState(blockpos).getMaterial() == Material.SAND)
 			{

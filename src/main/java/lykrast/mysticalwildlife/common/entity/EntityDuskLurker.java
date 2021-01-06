@@ -74,9 +74,9 @@ public class EntityDuskLurker extends EntityFurzard {
     	for (int i = 0; i < 10; ++i)
     	{
     		world.addParticle(ParticleTypes.LARGE_SMOKE, 
-    				posX + (rand.nextDouble() - 0.5D) * (double)getWidth(), 
-    				posY + rand.nextDouble() * (double)getHeight(), 
-    				posZ + (rand.nextDouble() - 0.5D) * (double)getWidth(), 
+    				serverPosX + (rand.nextDouble() - 0.5D) * (double)getWidth(),
+					serverPosY + rand.nextDouble() * (double)getHeight(),
+					serverPosZ + (rand.nextDouble() - 0.5D) * (double)getWidth(),
     				0.0D, 0.0D, 0.0D);
     	}
     }

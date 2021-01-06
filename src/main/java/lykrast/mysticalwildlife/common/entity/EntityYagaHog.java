@@ -119,7 +119,7 @@ public class EntityYagaHog extends AnimalEntity implements IBrushable {
 
     private void spawnLingeringCloud(int amplifier) {
     	//Adapted from the Creeper
-		AreaEffectCloudEntity areaeffectcloudentity = new AreaEffectCloudEntity(world, posX, posY, posZ);
+		AreaEffectCloudEntity areaeffectcloudentity = new AreaEffectCloudEntity(world, serverPosX, serverPosY, serverPosZ);
 		areaeffectcloudentity.setRadius(2.5F);
 		areaeffectcloudentity.setRadiusOnUse(-0.5F);
 		areaeffectcloudentity.setWaitTime(10);

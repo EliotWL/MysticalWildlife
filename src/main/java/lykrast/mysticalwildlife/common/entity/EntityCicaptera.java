@@ -87,8 +87,8 @@ public abstract class EntityCicaptera extends AnimalEntity {
         if (!onGround && motion.y < 0.0D) setMotion(motion.mul(1.0D, 0.6D, 1.0D));
     }
 
-    @Override
-	public void fall(float distance, float damageMultiplier) {}
+    //@Override
+	//public void fall(float distance, float damageMultiplier) {}
 
 	@Override
 	public AgeableEntity createChild(AgeableEntity ageable) {
@@ -281,9 +281,9 @@ public abstract class EntityCicaptera extends AnimalEntity {
 		    public void tick() {
 				LivingEntity leapTarget = leaper.getAttackTarget();
 				if (leapTarget == null || attacked) return;
-				double distance = this.leaper.getDistanceSq(leapTarget.posX, 
+				double distance = this.leaper.getDistanceSq(leapTarget.serverPosX,
 						(leapTarget.getBoundingBox().minY + leapTarget.getBoundingBox().maxY) / 2.0, 
-						leapTarget.posZ);
+						leapTarget.serverPosZ);
 				double range = (double)(leaper.getWidth() + leapTarget.getWidth());
 				
 				if (distance <= range) {
