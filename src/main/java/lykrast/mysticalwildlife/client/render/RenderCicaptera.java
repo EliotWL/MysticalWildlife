@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.util.ResourceLocation;
 
-public abstract class RenderCicaptera<T extends MobEntity> extends MobRenderer<T, ModelCicaptera<T>> {	
+public abstract class RenderCicaptera<T extends EntityCicaptera> extends MobRenderer<T, ModelCicaptera<T>> {
 	public RenderCicaptera(EntityRendererManager renderManagerIn) {
 		super(renderManagerIn, new ModelCicaptera<>(), 0.4F);
 	}
@@ -26,7 +26,7 @@ public abstract class RenderCicaptera<T extends MobEntity> extends MobRenderer<T
 		}
 
 		@Override
-		protected ResourceLocation getEntityTexture(EntityCicaptera.Azure entity) {
+		public ResourceLocation getEntityTexture(EntityCicaptera.Azure entity) {
 			return TEXTURES;
 		}
 	}
@@ -39,7 +39,7 @@ public abstract class RenderCicaptera<T extends MobEntity> extends MobRenderer<T
 		}
 
 		@Override
-		protected ResourceLocation getEntityTexture(EntityCicaptera.Verdant entity) {
+		public ResourceLocation getEntityTexture(EntityCicaptera.Verdant entity) {
 			return TEXTURES;
 		}
 	}
@@ -52,7 +52,7 @@ public abstract class RenderCicaptera<T extends MobEntity> extends MobRenderer<T
 		}
 
 		@Override
-		protected ResourceLocation getEntityTexture(EntityCicaptera.Crimson entity) {
+		public ResourceLocation getEntityTexture(EntityCicaptera.Crimson entity) {
 			return TEXTURES;
 		}
 	}
@@ -65,7 +65,7 @@ public abstract class RenderCicaptera<T extends MobEntity> extends MobRenderer<T
 		}
 
 		@Override
-		protected ResourceLocation getEntityTexture(EntityCicaptera.Sandy entity) {
+		public ResourceLocation getEntityTexture(EntityCicaptera.Sandy entity) {
 			return TEXTURES;
 		}
 	}
@@ -78,7 +78,7 @@ public abstract class RenderCicaptera<T extends MobEntity> extends MobRenderer<T
 		}
 
 		@Override
-		protected ResourceLocation getEntityTexture(EntityCicaptera.Wintry entity) {
+		public ResourceLocation getEntityTexture(EntityCicaptera.Wintry entity) {
 			return TEXTURES;
 		}
 	}
@@ -91,7 +91,7 @@ public abstract class RenderCicaptera<T extends MobEntity> extends MobRenderer<T
 		}
 
 		@Override
-		protected ResourceLocation getEntityTexture(EntityCicaptera.Lovely entity) {
+		public ResourceLocation getEntityTexture(EntityCicaptera.Lovely entity) {
 			return TEXTURES;
 		}
 	}

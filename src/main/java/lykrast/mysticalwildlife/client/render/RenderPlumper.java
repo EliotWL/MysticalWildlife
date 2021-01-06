@@ -16,7 +16,7 @@ public class RenderPlumper extends MobRenderer<EntityPlumper, ModelPlumper<Entit
 	}
 
     @Override
-    protected ResourceLocation getEntityTexture(EntityPlumper entity)
+    public ResourceLocation getEntityTexture(EntityPlumper entity)
     {
         return TEXTURES;
     }

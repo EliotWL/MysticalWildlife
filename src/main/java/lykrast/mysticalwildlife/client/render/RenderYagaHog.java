@@ -18,7 +18,7 @@ public class RenderYagaHog extends MobRenderer<EntityYagaHog, PigModel<EntityYag
 	}
 
     @Override
-    protected ResourceLocation getEntityTexture(EntityYagaHog entity)
+    public ResourceLocation getEntityTexture(EntityYagaHog entity)
     {
         return entity.isDirty() ? DIRTY : NORMAL;
     }

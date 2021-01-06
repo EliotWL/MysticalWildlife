@@ -20,7 +20,7 @@ public class RenderKrill extends MobRenderer<EntityKrill, ModelKrill<EntityKrill
     }
 
     @Override
-    protected ResourceLocation getEntityTexture(EntityKrill entity) {
+    public ResourceLocation getEntityTexture(EntityKrill entity) {
         return TEXTURES;
     }
 

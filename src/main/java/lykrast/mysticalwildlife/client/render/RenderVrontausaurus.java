@@ -16,7 +16,7 @@ public class RenderVrontausaurus extends MobRenderer<EntityVrontausaurus, ModelV
 	}
 
     @Override
-    protected ResourceLocation getEntityTexture(EntityVrontausaurus entity)
+    public ResourceLocation getEntityTexture(EntityVrontausaurus entity)
     {
         return TEXTURES;
     }
