@@ -128,7 +128,7 @@ public class ModelCicaptera<T extends MobEntity> extends EntityModel<T> {
         if (isChild) {
             matrixStackIn.push();
             matrixStackIn.scale(0.5F, 0.5F, 0.5F);
-            matrixStackIn.translate(0.0F, 2.0F, 0.0F);
+            matrixStackIn.translate(0.0F, 1.5F, 0.0F);
             ImmutableList.of(this.head, this.body).forEach((p_228292_8_) -> {
                 p_228292_8_.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
             });
